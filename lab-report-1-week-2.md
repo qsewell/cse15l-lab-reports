@@ -1,2 +1,3 @@
 This is my first lab report for the course CSE 15L at UCSD.
-[Image](ThisIsAnImage.jpg)
+
+![Screenshot from Lab 2](ThisIsAnImage.jpg)
