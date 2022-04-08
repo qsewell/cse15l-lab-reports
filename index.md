@@ -8,6 +8,7 @@ Hello. The etymology of the word "pachycephalasaurus" has to do with words that 
 
 ![Image](https://www.codingame.com/servlet/fileservlet?id=13848520651734)
 > Mathematics is the queen of science, and arithmetic the queen of mathematics. - Carl Friedrich Gauss
+
 * Triple integral
 * Another random element of this list
 * Laplace Transform
