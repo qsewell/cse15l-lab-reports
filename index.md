@@ -1,10 +1,16 @@
 # Hello.
 ## Hello.
 Hello. The etymology of the word "pachycephalasaurus" has to do with words that mean "thick-headed lizard".
+
+The following is a list of links to my lab reports for the course CSE 15L:
+* [Lab Report 1](https://qsewell.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
+
+---
+***
+The following consists of edits to this webpage that were made in pursuit of completing Lab 1 for this course:
 *Hello.*
 **Hello.**
 [Mathematical Beauty](https://en.wikipedia.org/wiki/Mathematical_beauty)
-
 
 ![Image](https://www.codingame.com/servlet/fileservlet?id=13848520651734)
 > Mathematics is the queen of science, and arithmetic the queen of mathematics. - Carl Friedrich Gauss
@@ -16,9 +22,6 @@ Hello. The etymology of the word "pachycephalasaurus" has to do with words that 
 1. Naive set theory
 2. Enumerative Combinatorics
 3. The set of all sets that do not contain themselves
-
----
-***
 
 `//Code goes here`
 
