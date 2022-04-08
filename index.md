@@ -11,12 +11,16 @@ Hello. The etymology of the word "pachycephalasaurus" has to do with words that 
 * Triple integral
 * Another random element of this list
 * Laplace Transform
+
 1. Naive set theory
 2. Enumerative Combinatorics
 3. The set of all sets that do not contain themselves
+
 ---
 ***
+
 `//Code goes here`
+
 ```
 /*
 * More code goes
