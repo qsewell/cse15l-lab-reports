@@ -3,7 +3,7 @@
 Hello. The etymology of the word "pachycephalasaurus" has to do with words that mean "thick-headed lizard".
 *Hello.*
 **Hello.**
-[Link](https://en.wikipedia.org/wiki/Mathematical_beauty)
+[Mathematical Beauty](https://en.wikipedia.org/wiki/Mathematical_beauty)
 ![Image](https://www.codingame.com/servlet/fileservlet?id=13848520651734)
 > Mathematics is the queen of science, and arithmetic the queen of mathematics. - Carl Friedrich Gauss
 * Triple integral
