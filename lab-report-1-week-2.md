@@ -23,7 +23,7 @@ After typing the above command, the terminal should prompt you for a password. E
 ![](lab-report-1-ssh.jpg)
 
 ### Step 3
-Now that you have remotely accessed another computer, it is helpful to know a few more terminal commands. One of these is pwd (and stands for "print working directory"), and shows you what folder or directory you are currently in. Another is ls (and stands for "list"), and has the function of listing all of the subdirectories you are currently in. There is also cd (which stands for "change directory"), which serves to change the directory that you are in. It has the following (simplified) syntax:
+Now that you have remotely accessed another computer, it is helpful to know a few more terminal commands. One of these is pwd (and stands for "print working directory"), and shows you what folder or directory you are currently in. Another is ls (and stands for "list"), and has the function of listing all of the subdirectories under the one you are currently in. There is also cd (which stands for "change directory"), which serves to change the directory that you are in. It has the following (simplified) syntax:
 >cd \<filePath\>
 
 Here, \<filePath\> can be specified by either an *absolute path* or a *relative path*. An absolute path is a path from the root directory (that is, the directory that contains all other directories and files). A relative path is a path starting from the current working directory. cd .. changes the working directory to the one immediately above the current working directory. Here is an image of some examples of these commands and their output (not all of which are described here):
