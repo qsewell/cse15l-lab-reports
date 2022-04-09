@@ -72,10 +72,10 @@ Here, "c" is an alias I defined in .bashrc. Also, one can compile and run a java
 
 This completes the tutorial, and my first lab.
 
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
+
+
+
 
 ---
 The following is an image that was added to this file for the purposes of completing Lab 2:
