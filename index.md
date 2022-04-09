@@ -1,6 +1,5 @@
-# Hello.
-## Hello.
-Hello. The etymology of the word "pachycephalasaurus" has to do with words that mean "thick-headed lizard".
+# CSE 15L Lab Reports Home
+## Quincy Sewell
 
 The following is a list of links to my lab reports for the course CSE 15L:
 * [Lab Report 1](https://qsewell.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
@@ -10,6 +9,8 @@ The following is a list of links to my lab reports for the course CSE 15L:
 The following consists of edits to this webpage that were made in pursuit of completing Lab 1 for this course:
 *Hello.*
 **Hello.**
+Hello. The etymology of the word "pachycephalasaurus" has to do with words that mean "thick-headed lizard".
+
 [Mathematical Beauty](https://en.wikipedia.org/wiki/Mathematical_beauty)
 
 ![Image](https://www.codingame.com/servlet/fileservlet?id=13848520651734)
@@ -26,7 +27,7 @@ The following consists of edits to this webpage that were made in pursuit of com
 `//Code goes here`
 
 ```
-# code block
+# Code block
 /*
 * More code goes
 * here.
