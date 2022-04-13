@@ -15,9 +15,9 @@ Also, if you are on Windows, install OpenSSH at the following link:
 ### Step 2
 Next, bring up a terminal. At the command line, type exactly the following:
 ```
-ssh \<yourUsername\>@ieng6.ucsd.edu
+ssh <yourUsername>@ieng6.ucsd.edu
 ```
-Here, `ssh` stands for "Secure Shell Protocol", which is used to remotely access other computers, and `\<yourUsername\>` is meant to be replaced with whatever your username is, which can be found at the following link: [https://sdacs.ucsd.edu/~icc/index.php](https://sdacs.ucsd.edu/~icc/index.php). Finally, `ieng6@ucsd.edu` is called the domain name of the computer you will be accessing.
+Here, `ssh` stands for "Secure Shell Protocol", which is used to remotely access other computers, and `<yourUsername>` is meant to be replaced with whatever your username is, which can be found at the following link: [https://sdacs.ucsd.edu/~icc/index.php](https://sdacs.ucsd.edu/~icc/index.php). Finally, `ieng6@ucsd.edu` is called the domain name of the computer you will be accessing.
 
 After typing the above command, the terminal should prompt you for a password. Enter your password (be forewarned: it will not show up on the screen as you are typing it) and hit Enter or Return. You should then see something like the following:
 
