@@ -27,7 +27,7 @@ This can also be seen at the following link to the relevant commit for MarkdownP
 
 [Commit1](https://github.com/qsewell/markdown-parser/commit/7f60c5a2c2935d5deef70ea59ecda40d8a803cda)
 
-The bug had to do with the fact that the condition of the while loop was never **not** satisfied (because the length of the input for the method getLinks was always greater than the currentIndex local variable). This bug resulted in the symptom expressed above. The symptom was expressed when given the failure-inducing input of test-file-2.md.
+The bug had to do with the fact that the condition of the while loop was never **not** satisfied (because the length of the input for the method getLinks was always greater than the currentIndex local variable). This bug resulted in the symptom expressed above. The symptom was expressed when given the failure-inducing input of test-file-2.md. This bug was corrected by adding an additional condition to the while loop which would be false in situations where "\[" was not found in the input file after the currentIndex local variable. This made it so that the program ran successfully when given test-file-2.md as an input.
 
 ## Code Change 2
 
