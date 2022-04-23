@@ -3,6 +3,7 @@
 
 The following is a list of links to my lab reports for the course CSE 15L:
 * [Lab Report 1](https://qsewell.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
+* [Lab Report 2](https://qsewell.github.io/cse15l-lab-reports/lab-report-2-week-4.html)
 
 ---
 ***
