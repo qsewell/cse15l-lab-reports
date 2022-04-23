@@ -23,12 +23,28 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
         at MarkdownParse.getLinks(MarkdownParse.java:19)  
         at MarkdownParse.main(MarkdownParse.java:30)
 
-This can also be seen at the following link to the relevant commit for MarkdownParse.java:
+This symptom can also be seen at the following link to the relevant commit for MarkdownParse.java:
 
 [Commit1](https://github.com/qsewell/markdown-parser/commit/7f60c5a2c2935d5deef70ea59ecda40d8a803cda)
 
 The bug had to do with the fact that the condition of the while loop was never **not** satisfied (because the length of the input for the method getLinks was always greater than the currentIndex local variable). This bug resulted in the symptom expressed above. The symptom was expressed when given the failure-inducing input of test-file-2.md. This bug was corrected by adding an additional condition to the while loop which would be false in situations where "\[" was not found in the input file after the currentIndex local variable. This made it so that the program ran successfully when given test-file-2.md as an input.
 
 ## Code Change 2
+![](lab-report-2-codechangediff2.jpg)
+
+Link to the test file for failure-inducing input that prompted the above change:
+
+[test-file-3.md](https://github.com/qsewell/markdown-parser/blob/main/test-file-3.md)
+
+The symptom initially caused by the above input was the following:
+
+$ java MarkdownParse test-file-3.md
+\[https://something.com, https://something.com, imagelinkhello, some-thing.html, imagelinkhello2\]
+
+This symptom can also be seen at the following link to the relevant commit for MarkdownParse.java:
+
+[Commit2](https://github.com/qsewell/markdown-parser/commit/175ec3592e757d619515929d39a6e1ae1b490f9c)
+
+The bug here had to do with the fact that MarkdownParse.java included code that would copy the image links as well as other links, because it simply added the Strings between "\[" and "\]" characters. To correct this, a try-catch block was used with an if statement in the try branch having a condition that checked for whether the character immediately before "\[" was "!" or not. The try-catch structure was necessary because it is possible that an IndexOutOfBoundsException occurs when checking that condition. This bug resulted in the symptom expressed above, which incorrectly includes image file links. This symptom was induced by the failure-inducing input test-file-3.md.
 
 ## Code Change 3
