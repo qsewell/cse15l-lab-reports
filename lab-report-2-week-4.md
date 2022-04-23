@@ -62,9 +62,9 @@ Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, e
         at java.base/java.lang.String.substring(String.java:2704)  
         at MarkdownParse.getLinks(MarkdownParse.java:25)  
         at MarkdownParse.main(MarkdownParse.java:40)  
-
-This symptom can also be seen at the following link to the relevant commit for MarkdownParse.java:
 ```
+This symptom can also be seen at the following link to the relevant commit for MarkdownParse.java:
+
 [Commit3](https://github.com/qsewell/markdown-parser/commit/e811f1efe9fd6fd2762a28cef5e37fc3c0be24f2)
 
 The bug here had to do with the fact that the first call to substring method in getLinks attempted to access a negative index. The symptom that this resulted in was an IndexOutOfBoundsException. To correct for this, I enclosed all calls to substring in if statements whose then branches only run when all local variables are not equal to negative one. The symptom expressed above (the IndexOutOfBoundsException) was induced by the failure-inducing input test-file3.md.
