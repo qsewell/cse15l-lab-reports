@@ -48,10 +48,11 @@ This symptom can also be seen at the following link to the relevant commit for M
 The bug here had to do with the fact that MarkdownParse.java included code that would copy the image links as well as other links, because it simply added the Strings between "\[" and "\]" characters. To correct this, a try-catch block was used with an if statement in the try branch having a condition that checked for whether the character immediately before "\[" was "!" or not. The try-catch structure was necessary because it is possible that an IndexOutOfBoundsException occurs when checking that condition. This bug resulted in the symptom expressed above, which incorrectly includes image file links. This symptom was induced by the failure-inducing input test-file-3.md.
 
 ## Code Change 3
+![](lab-report-2-codechangediff3.jpg)
 
 Link to the test file for failure-inducing input that prompted the above change:
 
-[test-file4.md](https://github.com/qsewell/markdown-parser/blob/main/test-file4.md)
+[test-file3.md](https://github.com/qsewell/markdown-parser/blob/main/test-file4.md)
 
 The symptom initially caused by the above input was the following:
 
@@ -66,4 +67,4 @@ This symptom can also be seen at the following link to the relevant commit for M
 
 [Commit3](https://github.com/qsewell/markdown-parser/commit/e811f1efe9fd6fd2762a28cef5e37fc3c0be24f2)
 
-The bug here
+The bug here had to do with the fact that the first call to substring method in getLinks attempted to access a negative index. The symptom that this resulted in was an IndexOutOfBoundsException. To correct for this, I enclosed all calls to substring in if statements whose then branches only run when all local variables are not equal to negative one. The symptom expressed above (the IndexOutOfBoundsException) was induced by the failure-inducing input test-file3.md.
