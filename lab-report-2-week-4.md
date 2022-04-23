@@ -48,3 +48,22 @@ This symptom can also be seen at the following link to the relevant commit for M
 The bug here had to do with the fact that MarkdownParse.java included code that would copy the image links as well as other links, because it simply added the Strings between "\[" and "\]" characters. To correct this, a try-catch block was used with an if statement in the try branch having a condition that checked for whether the character immediately before "\[" was "!" or not. The try-catch structure was necessary because it is possible that an IndexOutOfBoundsException occurs when checking that condition. This bug resulted in the symptom expressed above, which incorrectly includes image file links. This symptom was induced by the failure-inducing input test-file-3.md.
 
 ## Code Change 3
+
+Link to the test file for failure-inducing input that prompted the above change:
+
+[test-file4.md](https://github.com/qsewell/markdown-parser/blob/main/test-file4.md)
+
+The symptom initially caused by the above input was the following:
+
+$ java MarkdownParse test-file3.md  
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, end -1, length 31  
+        at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4601)  
+        at java.base/java.lang.String.substring(String.java:2704)  
+        at MarkdownParse.getLinks(MarkdownParse.java:25)  
+        at MarkdownParse.main(MarkdownParse.java:40)  
+
+This symptom can also be seen at the following link to the relevant commit for MarkdownParse.java:
+
+[Commit3](https://github.com/qsewell/markdown-parser/commit/e811f1efe9fd6fd2762a28cef5e37fc3c0be24f2)
+
+The bug here
