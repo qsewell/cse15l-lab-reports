@@ -26,3 +26,10 @@ In what follows, one can observe that I made edits to index.md (located in the r
 
 The commit that I made in the above image can also be viewed at the following link:
 [Commit Made in Above Image](https://github.com/qsewell/cse15l-lab-reports/commit/87f973bc8719cdeb3da56d3a6e526bbabb8e74b1)
+
+
+## Copy Whole Directories with `scp -r`
+
+In the image below, one can see that I used `scp -r` to copy the entirety of a directory called markdownParseFinal from my local computer to my account on ieng6. Not all of the output is shown, because there were many files that were copied in this process, and the entire output is rather long.
+![]()
+
