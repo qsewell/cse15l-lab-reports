@@ -13,6 +13,7 @@ The next image captures me using the alias that I defined (CS15L) to facilitate 
 
 ## Set Up Github Access from ieng6
 
-
-
-
+[]()
+[]()
+[]()
+[Commit Made in Above Image](https://github.com/qsewell/cse15l-lab-reports/commit/87f973bc8719cdeb3da56d3a6e526bbabb8e74b1)
