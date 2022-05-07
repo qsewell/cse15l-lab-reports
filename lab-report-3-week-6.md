@@ -31,5 +31,11 @@ The commit that I made in the above image can also be viewed at the following li
 ## Copy Whole Directories with `scp -r`
 
 In the image below, one can see that I used `scp -r` to copy the entirety of a directory called markdownParseFinal from my local computer to my account on ieng6. Not all of the output is shown, because there were many files that were copied in this process, and the entire output is rather long.
-![]()
+![](lab-report-3-scp.jpg)
+
+![](lab-report-3-runandcompile.jpg)
+
+![](lab-report-3-final1.jpg)
+
+![](lab-report-3-final2.jpg)
 
