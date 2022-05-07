@@ -12,8 +12,17 @@ The next image captures me using the alias that I defined (CS15L) to facilitate 
 ![](lab-report-3-scp-facilitated.jpg)
 
 ## Set Up Github Access from ieng6
+In the image below, one can see that I have added two public keys to my Github account. One is for the laptop that I regularly use, and the other is for my ieng6 account.
 
 ![](lab-report-3-publickeys.jpg)
+
+One can see where the private key is stored on my ieng6 account in the below image. In particular, the file containing the private key is called id_ed25519. Additionally, the file entitled id_ed25519.pub contains the public key.
+
 ![](lab-report-3-publicprivatekeys.jpg)
+
+In what follows, one can observe that I made edits to index.md (located in the repository in which this file is contained), and then proceeded to use `git add` and subsequently `git commit`. Finally, I used `git push origin main` to push the changes that I made to index.md to the origin.
+
 ![](lab-report-3-gitcommandsieng6.jpg)
+
+The commit that I made in the above image can also be viewed at the following link:
 [Commit Made in Above Image](https://github.com/qsewell/cse15l-lab-reports/commit/87f973bc8719cdeb3da56d3a6e526bbabb8e74b1)
