@@ -34,5 +34,14 @@ Here is my implementation of a JUnit test for this input:
 However, when run, my implementation of MarkdownParse gives the incorrect output, as can be seen from this terminal output of running the test:
 ![](Output1.jpg)
 
+When such a test is run on the implementation that I reviewed in Week 7, we also get an incorrect output:
+
+![](Output2.jpg)
+
+## Test 2
+
+## Test 3
+
+## Final Considerations
 I do not think that there does exist a small code change (less than 10 lines) to my implementation of MarkdownParse that could make my program work for this input and related cases having to do with inline code and backticks, although there certainly could be one that I am overlooking. The reason why I think this would be a more involved change is because there are so many cases of backticks to consider (e.g., backticks within the square brackets, backticks where one is to the left of the opening square bracket and one is enclosed by the square brackets, backticks that enclose the square brackets, backticks where one is to the right of the closing square bracket and one is encolosed by the square brakcets, etc.). An implementation of a stack structure as a way of keeping track of pairs of backticks could be useful in correcting for these kinds of inputs.
 
