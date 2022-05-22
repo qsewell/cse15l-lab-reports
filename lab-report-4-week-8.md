@@ -66,7 +66,49 @@ When such a test is run on the implementation that I reviewed in Week 7, we also
 ![](Output4.jpg)
 
 ## Test 3
+The following .md file represents the third test for both my own MarkdownParse implementation and the MarkdownParse implementation that I reviewed for Lab 7:
 
+```
+[this title text is really long and takes up more than 
+one line
+
+and has some line breaks](
+    https://www.twitter.com
+)
+
+[this title text is really long and takes up more than 
+one line](
+https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule
+)
+
+
+[this link doesn't have a closing parenthesis](github.com
+
+And there's still some more text after that.
+
+[this link doesn't have a closing parenthesis for a while](https://cse.ucsd.edu/
+
+
+
+)
+
+And then there's more text
+```
+
+Based on the preview shown in VS Code, the expected output for such an input is:
+```
+[https://twitter.com, https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule, https://cse.ucsd.edu/]
+```
+
+Here is my implementation of a JUnit test for this input:
+![](JUnitTest3.jpg)
+
+However, when run, my implementation of MarkdownParse gives the incorrect output, as can be seen from this terminal output of running the test (a portion of the output is omitted for the sake of brevity):
+![](Output5.jpg)
+
+When such a test is run on the implementation that I reviewed in Week 7, we also get an incorrect output (again, a portion of the output is omitted here for the sake of brevity):
+
+![](Output6.jpg)
 ## Final Considerations
 I do not think that there does exist a small code change (less than 10 lines) to my implementation of MarkdownParse that could make my program work for this input and related cases having to do with inline code and backticks, although there certainly could be one that I am overlooking. The reason why I think this would be a more involved change is because there are so many cases of backticks to consider (e.g., backticks within the square brackets, backticks where one is to the left of the opening square bracket and one is enclosed by the square brackets, backticks that enclose the square brackets, backticks where one is to the right of the closing square bracket and one is encolosed by the square brakcets, etc.). An implementation of a stack structure as a way of keeping track of pairs of backticks could be useful in correcting for these kinds of inputs.
 
