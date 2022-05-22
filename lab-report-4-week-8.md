@@ -31,7 +31,7 @@ Based on the preview shown in VS Code, the expected output for such an input is:
 Here is my implementation of a JUnit test for this input:
 ![](JUnitTest1.jpg)
 
-However, when run, my implementation of MarkdownParse gives the incorrect output, as can be seen from this terminal output of running the test:
+However, when run, my implementation of MarkdownParse gives the incorrect output, as can be seen from this terminal output of running the test (a portion of the output is omitted for the sake of brevity):
 ![](Output1.jpg)
 
 When such a test is run on the implementation that I reviewed in Week 7, we also get an incorrect output:
