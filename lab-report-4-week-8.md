@@ -34,11 +34,36 @@ Here is my implementation of a JUnit test for this input:
 However, when run, my implementation of MarkdownParse gives the incorrect output, as can be seen from this terminal output of running the test (a portion of the output is omitted for the sake of brevity):
 ![](Output1.jpg)
 
-When such a test is run on the implementation that I reviewed in Week 7, we also get an incorrect output:
+When such a test is run on the implementation that I reviewed in Week 7, we also get an incorrect output (again, a portion of the output is omitted here for the sake of brevity):
 
 ![](Output2.jpg)
 
 ## Test 2
+The following .md file represents the second test for both my own MarkdownParse implementation and the MarkdownParse implementation that I reviewed for Lab 7:
+
+```
+[a [nested link](a.com)](b.com)
+
+[a nested parenthesized url](a.com(()))
+
+[some escaped \[ brackets \]](example.com)
+
+```
+
+Based on the preview shown in VS Code, the expected output for such an input is:
+```
+[a.com, a.com(()), example.com]
+```
+
+Here is my implementation of a JUnit test for this input:
+![](JUnitTest2.jpg)
+
+However, when run, my implementation of MarkdownParse gives the incorrect output, as can be seen from this terminal output of running the test (a portion of the output is omitted for the sake of brevity):
+![](Output3.jpg)
+
+When such a test is run on the implementation that I reviewed in Week 7, we also get an incorrect output (again, a portion of the output is omitted here for the sake of brevity):
+
+![](Output4.jpg)
 
 ## Test 3
 
