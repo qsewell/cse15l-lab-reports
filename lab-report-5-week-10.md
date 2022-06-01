@@ -52,7 +52,7 @@ And finally, we can see that my program now does give the correct output for 22.
 ![](lab-report-5-22-correct.jpg)
 
 ## Examination of Different Outputs for 32.md
-For the test file 32.md, neither implementation of MarkdownParse gave the correct output; as can be verified by using the preview of a Markdown file's rendering in Virtual Studio Code, the correct (expected) output should be:
+For the test file 32.md, neither implementation of MarkdownParse gave the correct output. This discussion will have to do with HTML entities, and my discussion here might be displayed incorrectly on GitHub Pages, but it will be displayed correctly in my GitHub repository. As can be verified by using the preview of a Markdown file's rendering in Virtual Studio Code, the correct (expected) output should be:
 
 [f&ouml;&ouml;]
 
@@ -68,6 +68,6 @@ The implementation of MarkdownParse I was given in Week 9 gave the following out
 
 ![](lab-report-5-32-output2.jpg)
 
-Clearly both outputs are different and both are incorrect. The bug in my code has to do with the fact that I do not account for HTML entities in link addresses; in this case, "\&ouml;" is printed as a String literal in my MarkdownParse's output for this MarkdownParse file, but "&ouml;" should be printed istead. However, I do not think that much can be done, especially because I cannot get the terminal to display special characters like &ouml;. So this may be the best output I can reasonably achieve. One thing that I could do is signify in some way that "\&ouml;" stands in for a special character - perhaps I could print something like "There are special character(s) in the following link address that cannot be displayed:" by concatenating that with `potentialLink` before adding it to `toReturn` in the code below (these would be changes in **lines 129, 132, 138, and 141** - I would have to add conditions of some kind which check if there are HTML entities in `potentialLink` before adding that message, of course):
+Clearly both outputs are different and both are incorrect. The bug in my code has to do with the fact that I do not account for HTML entities in link addresses; in this case, "\&ouml;" is printed as a String literal in my MarkdownParse's output for this MarkdownParse file, but "&ouml;" should be printed instead. However, I do not think that much can be done, especially because I cannot get the terminal to display special characters like &ouml;. So this may be the best output I can reasonably achieve. One thing that I could do is signify in some way that "\&ouml;" stands in for a special character - perhaps I could print something like "There are special character(s) in the following link address that cannot be displayed:" by concatenating that with `potentialLink` before adding it to `toReturn` in the code below (these would be changes in **lines 129, 132, 138, and 141** - I would have to add conditions of some kind which check if there are HTML entities in `potentialLink` before adding that message, of course):
 
 ![](lab-report-5-32-bug.jpg)
