@@ -37,6 +37,37 @@ The implementation of MarkdownParse I was given in Week 9 gave the following out
 
 ![](lab-report-5-22-output1.jpg)
 
-Clearly these outputs are different and both incorrect. 
+Clearly these outputs are different and both are incorrect. The incorrect behavior in my implementation is in the lines contained in the image below:
+
+![](lab-report-5-22-bug-1.jpg)
+
+In the above code, `potentialLink` represents the String that is found between two open parentheses. As can be seen in the code above, I simply add `potentialLink` to
+the ArrayList that will eventually be returned. This explains the incorrect output; my MarkdownParse simply returned all of the text in between the parentheses. However, it should instead only return the text contained in between the quotes, and it should also ignore the escape character "\\". To remedy this issue, I in fact
+added a method in MarkdownParse called `getLinkWhenQuotes` that returns the text between two double quotes, and another method that removes all escape characters (in markdown) from a String, called `removeEscapeCharacters`. The following image shows me calling both of these methods, and effectively correcting this bug:
+
+![](lab-report-5-22-fix-1.jpg)
+
+And finally, we can see that my program now does give the correct output for 22.md:
+
+![](lab-report-5-22-correct.jpg)
 
 ## Examination of Different Outputs for 32.md
+For the test file 32.md, neither implementation of MarkdownParse gave the correct output; as can be verified by using the preview of a Markdown file's rendering in Virtual Studio Code, the correct (expected) output should be:
+
+[f&ouml;&ouml;]
+
+My implementation of MarkdownParse gave the following output originally (this can also be seen from the result of the `vimdiff` command discussed and displayed earlier):
+
+[/f\&ouml;\&ouml; "f\&ouml;\&ouml;"]
+
+However, after correcting for the 22.md test, it now gives the following (still incorrect) output:
+
+![](lab-report-5-32-output1.jpg)
+
+The implementation of MarkdownParse I was given in Week 9 gave the following output (this can also be seen above):
+
+![](lab-report-5-32-output2.jpg)
+
+Clearly both outputs are different and both are incorrect. The bug in my code has to do with the fact that I do not account for HTML entities in link addresses; in this case, "\&ouml;" is printed as a String literal in my MarkdownParse's output for this MarkdownParse file, but "&ouml;" should be printed istead. However, I do not think that much can be done, especially because I cannot get the terminal to display special characters like &ouml;. So this may be the best output I can reasonably achieve. One thing that I could do is signify in some way that "\&ouml;" stands in for a special character - perhaps I could print something like "There are special character(s) in the following link address that cannot be displayed:" by concatenating that with `potentialLink` before adding it to `toReturn` in the code below (these would be changes in **lines 129, 132, 138, and 141** - I would have to add conditions of some kind which check if there are HTML entities in `potentialLink` before adding that message, of course):
+
+![](lab-report-5-32-bug.jpg)
