@@ -31,9 +31,10 @@ For the test file 22.md, neither implementation of MarkdownParse gave the correc
 
 My implementation of MarkdownParse gave the following output (this can also be seen from the result of the `vimdiff` command discussed and displayed earlier):
 
-![]()
+![](lab-report-5-22-output2.jpg)
 
 The implementation of MarkdownParse I was given in Week 9 gave the following output (this can also be seen above):
 
-![]()
+![](lab-report-5-22-output1.jpg)
+
 ## Examination of Different Outputs for 32.md
