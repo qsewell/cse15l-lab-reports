@@ -37,4 +37,6 @@ The implementation of MarkdownParse I was given in Week 9 gave the following out
 
 ![](lab-report-5-22-output1.jpg)
 
+Clearly these outputs are different and both incorrect. 
+
 ## Examination of Different Outputs for 32.md
